@@ -1,0 +1,20 @@
+{
+    "kafka": {
+        "brokers": "localhost:9092",
+        "groupId": "my-consumer-group",
+        "topics": {
+            "main": "main-topic",
+            "retry1": "retry-topic-1",
+            "retry2": "retry-topic-2",
+            "retry3": "retry-topic-3",
+            "dlq": "dlq-topic"
+        },
+        "partitions": 16,
+        "replicationFactor": 1,
+        "defaultConfig": {
+            "auto.offset.reset": "earliest",
+            "acks": "all",
+            "compression.type": "snappy"
+        }
+    }
+}
